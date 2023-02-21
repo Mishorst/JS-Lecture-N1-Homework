@@ -26,3 +26,31 @@ const temperatureFarToCel = function (a) {
 console.log(temperatureFarToCel(140));
 console.log(temperatureFarToCel("50"));
 console.log(temperatureFarToCel(-140));
+
+// N#3
+// ფუნქცია სრულებს გამოთვლას, თუ კი შეყვანილი მნიშვნელობა არ იქნება რიცხვი ან ოპერაცია არ იქნება მოცემულიდან რომელიმე დააბრუნებს false -ს
+const mathOperation = function (a, b, operation) {
+  if (typeof a === typeof 1 && typeof b === typeof 1) {
+    switch (operation) {
+      case "*":
+        return a * b;
+      case "/":
+        return a / b;
+      case "+":
+        return a + b;
+      case "-":
+        return a - b;
+      default:
+        return false;
+    }
+  } else {
+    return false;
+  }
+};
+
+console.log(mathOperation(3, 4, "-"));
+console.log(mathOperation(43, 33, "+"));
+console.log(mathOperation(4, 5, "*"));
+console.log(mathOperation(8, 4, "/"));
+console.log(mathOperation(8, "4", "/"));
+console.log(mathOperation(8, 4, "m"));
